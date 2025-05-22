@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Tampil</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 200px;
+            display: none;
+            position: relative;
+        }
+
+        #pesan {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #800e0e;
+            background-color: #880723;
+            color: #000000;
+            display: none;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button onclick="tampilkanGambar()">Tekan</button>
+        <br>
+        <img id="gambar" src="hh.jpg" alt="gambar">
+        <div id="pesan">Kurumi pacar Zaki!</div>
+    </div>
+
+    <script>
+        let pacarZaki = false;
+
+        function tampilkanGambar() {
+            if (!pacarZaki) {
+                document.getElementById("gambar").style.display = "block";
+                document.getElementById("pesan").style.display = "block";
+                pacarZaki = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
